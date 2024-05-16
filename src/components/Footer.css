@@ -1,0 +1,14 @@
+.footer-container {
+    background-color: #14213d;
+    color: white;
+    max-width: none;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer-container .nav-link {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,23 @@
+body {
+  color: #14213d;
+  font-family: 'Montserrat', bold;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #14213d;
+  border-color: #14213d;
+  border-radius: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}

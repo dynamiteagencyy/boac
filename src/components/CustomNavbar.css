@@ -1,0 +1,22 @@
+.navbar-custom {
+    background-color: white !important;
+}
+
+.navbar-custom .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    padding: 1px;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+    margin: 0px 12px;
+    letter-spacing: 1px;
+}
+
+.nav-link.active {
+    border-bottom-color: #14213d;
+}
+
+.navbar-nav {
+    margin: auto;
+}
