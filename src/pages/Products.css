@@ -1,0 +1,9 @@
+.img-pull-left-side:hover{
+
+       transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    /* IE 9 */
+    -webkit-transform:rotate(-15deg);
+    z-index: -1;
+}
+
