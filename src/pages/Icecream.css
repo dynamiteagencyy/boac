@@ -1,3 +1,4 @@
+/* Icecream.css */
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -6,18 +7,18 @@
     transform: rotate(360deg);
   }
  }
-.container-products-detail {
+ .container-products-detail {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Sayfanın tamamını kaplaması için */
+  height: 100%;
   position: relative;
   overflow: hidden;
   background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/products_icecream_bg.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
  }
  .image {
   position: absolute;
@@ -26,74 +27,133 @@
  }
  .half-left {
   clip-path: inset(0 0 0 50%);
-  left:-20%;
-  top:20%;
+  left: -20%;
+  top: 20%;
  }
  .half-left img {
   height: 40%;
-  transform: translateX(-50%); /* Resmin yarısını kesmek için */
+  transform: translateX(-50%);
   transform: translateY(-20%);
-  animation: rotate 10s linear infinite; /* 360 derece döndürme animasyonu */
+  animation: rotate 10s linear infinite;
  }
  .half-right {
   clip-path: inset(0 50% 0 0);
-  right:-20%;
+  right: -20%;
   top: 20%;
  }
  .half-right img {
-  height:  40%;
+  height: 40%;
   animation: rotate 10s linear infinite;
-  transform: translateX(50%); /* Resmin yarısını kesmek için */
+  transform: translateX(50%);
   transform: translateY(-20%);
  }
  .ice-content {
   flex: 1;
-  padding: 0 20px; /* İçeriğin kenarlardan biraz uzakta olması için */
+  padding: 0 20px;
   text-align: center;
  }
- .ice-content h1{
+ .ice-content h1 {
   margin-bottom: 100px;
  }
- .imgholder{
-  margin:25px 0px;
+ .imgholder {
+  margin: 25px 0px;
   display: flex;
   justify-content: center;
   align-self: center;
   overflow-y: auto;
-  background-color: white;
+  background-color: transparent;
  }
- .img-holder-pic{
+ .img-holder-pic {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:22%;
+  width: 22%;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   border-radius: 60px;
-  margin-bottom:20px ;
+  margin-bottom: 20px;
+  background-color: white;
  }
- .img-holder-pic img{
-  width:70%;
+ .img-holder-pic img {
+  width: 70%;
  }
- .img-holder-text{
+ .img-holder-text {
   position: relative;
   display: flex;
-  align-items:center;
-  justify-items:flex-start;
-  width:400px;
-  height:300px;
+  align-items: center;
+  justify-items: flex-start;
+  width: 400px;
+  height: 300px;
   text-align: left;
-  
+ }
+ .img-holder-text ul li {
+  list-style: none;
+  padding: 3px;
+ }
+ .imgholder button {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border: none;
+ }
+ @media screen and (max-width: 530px) {
+  .half-left, .half-right {
+    display: none;
+  }
+  .imgholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-holder-pic {
+    width: 60%;
+  }
+ }
+
+ @media screen and (max-width: 780px) and (min-width: 530px) {
+  .half-left, .half-right {
+    display: none;
+  }
+  .imgholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-holder-pic {
+    width: 40%;
+  }
+ }
+ @media screen and (max-width: 1100px) and (min-width: 780px) {
+  .half-right  {
+    clip-path: inset(0 50% 0 0);
+    right: -25%;
+    top: 10%;
+   }
+   .half-left  {
+    clip-path: inset(0 0 0 50%);
+    left: -25%;
+    top: 10%;
+   }
+  .half-left img {
+    height: 25%;
+    transform: translateX(-50%);
+    transform: translateY(-20%);
+    animation: rotate 10s linear infinite;
+   }
+  .half-right img {
+    height: 25%;
+    animation: rotate 10s linear infinite;
+    transform: translateX(-50%);
+    transform: translateY(-20%);
+   }
+  .imgholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-holder-pic {
+    width: 30%;
+  }
 
  }
- .img-holder-text ul li{
-  list-style: none;
-  padding: 10px;
- }
-.imgholder button{
-  width: 80px;
-  height:40px;
-  background-color: black;
-  color:white;
-  border-radius: 30px;
-  border:none;
-}
