@@ -33,6 +33,10 @@ export default function Home() {
 
                 </Col>
             </Row>
+            <Row className="gift-design">
+                <Col>gift</Col>
+                <Col><h2>we serve,</h2><h2>you deserve!</h2></Col>
+            </Row>
             <Row>
                 <Col className="ozgun-tasarim-col" xs={12} md={12} lg={4}>
                     <Image
