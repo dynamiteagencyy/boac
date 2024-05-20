@@ -5,7 +5,11 @@ import CustomNavbar from './components/CustomNavbar';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import About from './pages/About';
-
+import Products from './pages/Products';
+import Icecream from './pages/Icecream';
+import Cones from './pages/Cones';
+import Yogurts from './pages/Yogurts';
+import Drinks from './pages/Drinks';
 function App() {
   return (
     <div className="App">
@@ -13,9 +17,13 @@ function App() {
         <CustomNavbar></CustomNavbar>
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/urunlerimiz" Component={Home} />
+          <Route path="/urunlerimiz" Component={Products} />
           <Route path="/hakkimizda" Component={About} />
           <Route path="/iletisim" Component={Contact} />
+          <Route path="/urunlerimiz/dondurmalarimiz" Component={Icecream} />
+          <Route path="/urunlerimiz/yogurtlarimiz" Component={Yogurts} />
+          <Route path="/urunlerimiz/külahlarimiz" Component={Cones} />
+          <Route path="/urunlerimiz/içeceklerimiz" Component={Drinks} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

@@ -1,0 +1,99 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+ }
+.container-products-detail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Sayfanın tamamını kaplaması için */
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/products_icecream_bg.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+ }
+ .image {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+ }
+ .half-left {
+  clip-path: inset(0 0 0 50%);
+  left:-20%;
+  top:20%;
+ }
+ .half-left img {
+  height: 40%;
+  transform: translateX(-50%); /* Resmin yarısını kesmek için */
+  transform: translateY(-20%);
+  animation: rotate 10s linear infinite; /* 360 derece döndürme animasyonu */
+ }
+ .half-right {
+  clip-path: inset(0 50% 0 0);
+  right:-20%;
+  top: 20%;
+ }
+ .half-right img {
+  height:  40%;
+  animation: rotate 10s linear infinite;
+  transform: translateX(50%); /* Resmin yarısını kesmek için */
+  transform: translateY(-20%);
+ }
+ .ice-content {
+  flex: 1;
+  padding: 0 20px; /* İçeriğin kenarlardan biraz uzakta olması için */
+  text-align: center;
+ }
+ .ice-content h1{
+  margin-bottom: 100px;
+ }
+ .imgholder{
+  margin:25px 0px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  overflow-y: auto;
+  background-color: white;
+ }
+ .img-holder-pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:22%;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 60px;
+  margin-bottom:20px ;
+ }
+ .img-holder-pic img{
+  width:70%;
+ }
+ .img-holder-text{
+  position: relative;
+  display: flex;
+  align-items:center;
+  justify-items:flex-start;
+  width:400px;
+  height:300px;
+  text-align: left;
+  
+
+ }
+ .img-holder-text ul li{
+  list-style: none;
+  padding: 10px;
+ }
+.imgholder button{
+  width: 80px;
+  height:40px;
+  background-color: black;
+  color:white;
+  border-radius: 30px;
+  border:none;
+}
