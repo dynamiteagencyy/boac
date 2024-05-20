@@ -3,3 +3,56 @@
     margin: 0 10vw;
     max-width: fit-content;
 }
+
+.ozgun-tasarim-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ozgun-tasarim-img-1 {
+    width: 100%;
+    margin-top: 30vh;
+    margin-left: 10vw;
+}
+
+.ozgun-tasarim-img-2 {
+    width: 100%;
+    margin-right: 10vh;
+}
+
+.carousel-control-icon {
+    background-color: #14213d;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+}
+
+@media (max-width: 999px) {
+    .ozgun-tasarim-img-1 {
+        width: 80%;
+        margin: 0;
+    }
+    
+    .ozgun-tasarim-img-2 {
+        width:90%;
+        margin-top: -50vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .ozgun-tasarim-img-1 {
+        width: 80%;
+        margin: 0;
+    }
+    
+    .ozgun-tasarim-img-2 {
+        width:90%;
+        margin-top: -120vh;
+    }
+}

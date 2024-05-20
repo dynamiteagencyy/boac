@@ -31,7 +31,7 @@ export default function Footer() {
                 <Col>
                     <Image
                         width="120px"
-                        src="https://boac.s3.eu-central-1.amazonaws.com/logo_white.png" />
+                        src="https://boac-website.s3.eu-central-1.amazonaws.com/logo_white.png" />
                 </Col>
             </Row>
             <Row style={{marginTop: '20px'}}>

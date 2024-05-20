@@ -17,7 +17,7 @@ export default function CustomNavbar() {
                 <Navbar.Brand href="#home">
                     <Image
                         width="150px"
-                        src="https://boac.s3.eu-central-1.amazonaws.com/logo.png" />
+                        src="https://boac-website.s3.eu-central-1.amazonaws.com/logo.png" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
