@@ -1,7 +1,20 @@
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image, Carousel } from 'react-bootstrap';
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import './About.css';
 
+interface Image {
+    id: number;
+    url: string;
+}
+
 export default function About() {
+    const images: Image[] = [
+        { id: 1, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' },
+        { id: 2, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' },
+        { id: 3, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' },
+        { id: 4, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' }
+    ];
+
     return (
         <>
             <Container className='about-container'>
@@ -84,14 +97,29 @@ export default function About() {
                     </Col>
                 </Row>
             </Container>
-            <Row style={{marginTop: '50px'}}>
-                <Col className='about-bg-full-col'>
-                    <Image
-                        className="about-bg-full-img"
-                        src="https://boac-website.s3.eu-central-1.amazonaws.com/about_bg_3.png" />
-                    <h3 className='about-bg-full-text'>BOAC Soft Serve olarak, lezzetin sınırlarını zorlayan bir marka olarak yolculuğumuza devam ediyoruz. Siz de bizimle birlikte bu lezzet dolu <br></br> maceraya katılarak, tatlı tutkunluğunuzun yeni ve sağlıklı adresini keşfedin!</h3>
-                </Col>
-            </Row>
+            <div className='about-bg-full-col'>
+                <Image
+                    className="about-bg-full-img"
+                    src="https://boac-website.s3.eu-central-1.amazonaws.com/about_bg_3.png" />
+                <h3 className='about-bg-full-text'>BOAC Soft Serve olarak, lezzetin sınırlarını zorlayan bir marka olarak yolculuğumuza devam ediyoruz. Siz de bizimle birlikte bu lezzet dolu maceraya katılarak, tatlı tutkunluğunuzun yeni ve sağlıklı adresini keşfedin!</h3>
+            </div>
+            <div style={{ margin: '0', padding: '0' }}>
+                <Carousel
+                    indicators={false}
+                    nextIcon={<MdChevronRight size={100} />}
+                    prevIcon={<MdChevronLeft size={100} />}>
+                    {images.map((item) => (
+                        <Carousel.Item key={item.id}>
+                            <div>
+                                <Image
+                                    className="d-block w-100"
+                                    style={{ objectFit: 'cover' }}
+                                    src={item.url} />
+                            </div>
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
+            </div>
         </>
     );
 }
