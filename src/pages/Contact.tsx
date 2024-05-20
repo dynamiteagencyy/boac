@@ -13,8 +13,8 @@ export default function Contact() {
         <Container className="contact-container">
             <Row>
                 <Col style={{ marginTop: '20px' }}>
-                    <p style={{ fontSize: '32px', fontWeight: 'bold' }}>Bize Ulaşın</p>
-                    <p style={{fontSize: '14px'}}>Soru, öneri veya geri bildirimleriniz varsa, bize aşağıdaki formu <br></br> doldurarak ulaşabilirsiniz.</p>
+                    <h1>Bize Ulaşın</h1>
+                    <p>Soru, öneri veya geri bildirimleriniz varsa, bize aşağıdaki formu <br></br> doldurarak ulaşabilirsiniz.</p>
                     <form className='contact-form' onSubmit={sendEmail}>
                         <label className="contact-label" htmlFor="nameFrom">Adınız:</label>
                         <input className="contact-input" type="text" name="name_from" id="nameFrom"></input>

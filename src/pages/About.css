@@ -1,0 +1,186 @@
+.about-container {
+    margin-top: 10vh;
+}
+
+.about-container h3 {
+    margin: 0;
+}
+
+.about-bg {
+    width: 80%;
+}
+
+.about-bg-full-img {
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/about_bg_3.png");
+}
+
+.about-bg-text-1 {
+    position: absolute;
+    top: 6vh;
+    left: 12vw;
+    color: white;
+    text-align: left;
+}
+
+.about-bg-text-1 p {
+    width: 40vw;
+}
+
+.about-bg-text-2 {
+    position: absolute;
+    top: 6vh;
+    right: 12vw;
+    color: white;
+    text-align: right;
+}
+
+.about-bg-text-2 p {
+    width: 40vw;
+}
+
+.about-bg-col {
+    position: relative;
+    margin-top: 50px;
+}
+
+.about-first-text p {
+    margin-top: 20px;
+    padding: 0 10vw;
+}
+
+.about-second-text {
+    text-align: left;
+    margin-top: 100px;
+    padding: 0 7vw;
+}
+
+.about-second-text h2 {
+    font-weight: 400;
+    margin-top: -12px;
+}
+
+.about-no-img {
+    width: 30%;
+    margin-top: 2vh;
+}
+
+.about-no-text {
+    text-align: left;
+    margin-left: -5vw;
+    margin-top: 2vh;
+}
+
+.about-no-text p {
+    margin-top: -10px;
+}
+
+.about-bg-full-col {
+    position: relative;
+    text-align: center;
+    
+}
+
+.about-bg-full-text {
+    position: absolute;
+    color: white;
+    top: 15vh;
+    padding: 0 20vw;
+    font-weight: normal;
+    line-height: 4vh;
+}
+
+.about-no-row {
+    margin-top: 5vh;
+}
+
+@media (max-width: 600px) {
+    .about-container {
+        margin-top: 5vh;
+    }
+
+    .about-bg-text-1 {
+        top: 0;
+        left: 15vw;
+    }
+
+    .about-bg-text-1 p {
+        width: 50vw;
+        margin-top: -1.5vh;
+    }
+
+    .about-bg-text-2 {
+        top: 0;
+        right: 15vw;
+    }
+
+    .about-bg-text-2 p {
+        width: 54vw;
+        margin-top: -2vh;
+    }
+
+    .about-bg-col {
+        margin-top: 10px;
+    }
+
+    .about-first-text p {
+        margin-top: 0;
+    }
+
+    .about-no-img {
+        width: 50%;
+    }
+
+    .about-no-text {
+        margin-top: 0;
+    }
+
+    .about-second-text {
+        margin-top: 50px;
+    }
+    
+    .about-second-text h2 {
+        margin-top: -30px;
+    }
+
+    .about-no-row {
+        margin-top: 0;
+    }
+    
+}
+
+@media (max-width: 992px) and (min-width: 600px) {
+    .about-bg-text-1 {
+        top: 1vh;
+        left: 15vw;
+    }
+
+    .about-bg-text-2 {
+        top: 1vh;
+        right: 15vw;
+    }
+
+    .about-no-img {
+        width: 40%;
+    }
+
+    .about-no-text {
+        margin-top: 1vh;
+    }
+
+    .about-second-text {
+        margin-top: 40px;
+    }
+    
+    .about-second-text h2 {
+        margin-top: -30px;
+    }
+
+    .about-no-row {
+        margin-top: 0;
+    }
+}

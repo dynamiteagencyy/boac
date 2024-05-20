@@ -22,9 +22,9 @@ export default function Home() {
         <Container className="home-container">
             <Row>
                 <Col xs={12} md={6} lg={5}>
-                    <p style={{ textAlign: 'left', fontSize: '20px', fontWeight: 'bold' }}>BOAC'a Hoşgeldin!</p>
-                    <p style={{ textAlign: 'left', fontSize: '50px', fontWeight: '1000' }}>Bizimle Keşfe Çıkın Ve Damaklarınızı Şımartın!</p>
-                    <p style={{ textAlign: 'left', marginTop: '50px', fontSize: '16px', maxWidth: '30vw' }}>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
+                    <h3 style={{ textAlign: 'left' }}>BOAC'a Hoşgeldin!</h3>
+                    <h1 style={{ textAlign: 'left' }}>Bizimle Keşfe Çıkın <br></br> Ve Damaklarınızı Şımartın!</h1>
+                    <p style={{ textAlign: 'left', marginTop: '50px', maxWidth: '30vw' }}>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
                     <div style={{ textAlign: 'left', marginTop: '50px' }}>
                         <Button variant="primary">Ürünlere Göz At?</Button>
                     </div>
@@ -47,7 +47,7 @@ export default function Home() {
             </Row>
             <Row>
                 <Col style={{marginBottom: '-80px', zIndex: '2000'}}>
-                    <p style={{ fontSize: '40px', color: '#14213d', fontWeight: 'bold' }}>Müşterilerimiz Ne Düşünüyor?<br></br>"</p>
+                    <h1>Müşterilerimiz Ne Düşünüyor?<br></br>"</h1>
                 </Col>
             </Row>
             <Row>
@@ -59,9 +59,9 @@ export default function Home() {
                         {comments.map((item) => (
                             <Carousel.Item key={item.id}>
                                 <div className="d-block w-100" style={{ height: '200px', backgroundColor: 'white', paddingTop: '80px'}}>
-                                    <p className="text-center" style={{color: '#14213d', fontSize: '12px', marginBottom: '30px'}}>{item.comment}</p>
-                                    <p className="text-center" style={{color: '#14213d', fontSize: '14px', fontWeight: 'bold', margin: '0'}}>{item.name}</p>
-                                    <p className="text-center" style={{color: '#14213d', fontSize: '12px'}}>{item.title}</p>
+                                    <p className="text-center" style={{marginBottom: '30px'}}>{item.comment}</p>
+                                    <p className="text-center" style={{fontSize: '16px', fontWeight: 'bold', margin: '0'}}>{item.name}</p>
+                                    <p className="text-center">{item.title}</p>
                                 </div>
                             </Carousel.Item>
                         ))}
