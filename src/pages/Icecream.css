@@ -60,7 +60,8 @@
   justify-content: center;
   align-self: center;
   overflow-y: auto;
-  background-color: white;
+  background-color: transparent;
+  
  }
  .img-holder-pic{
   display: flex;
@@ -70,6 +71,7 @@
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   border-radius: 60px;
   margin-bottom:20px ;
+  background-color: white;
  }
  .img-holder-pic img{
   width:70%;
@@ -82,12 +84,12 @@
   width:400px;
   height:300px;
   text-align: left;
-  
+ 
 
  }
  .img-holder-text ul li{
   list-style: none;
-  padding: 10px;
+  padding: 3px;
  }
 .imgholder button{
   width: 80px;

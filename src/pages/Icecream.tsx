@@ -14,7 +14,7 @@ const Icecream = () => {
     <div className='img-holder-pic'><img src="https://boac-website.s3.eu-central-1.amazonaws.com/icecream_product_caramel.png"/></div>
       <div className='img-holder-text'>
         <ul>
-          <li>Tuzlu karamel</li>
+          <li><h3>Tuzlu Karamel</h3></li>
           <li>BOAC Soft Serve'de, her zevke uygun çeşitli soft serve dondurma ve el yapımı topping'ler bulabilirsiniz. Yoğun lezzetlerimizi keşfedin ve damaklarınızı şımartın.</li>
           <li><button>100₺</button></li>
         </ul>
@@ -25,7 +25,7 @@ const Icecream = () => {
     <div className='img-holder-pic' ><img src="https://boac-website.s3.eu-central-1.amazonaws.com/icecream_product_baklava.png"/></div>
       <div className='img-holder-text'>
         <ul>
-          <li>Fıstıklı Baklava</li>
+          <li><h3>Fıstıklı Baklava</h3></li>
           <li>BOAC Soft Serve'de, her zevke uygun çeşitli soft serve dondurma ve el yapımı topping'ler bulabilirsiniz. Yoğun lezzetlerimizi keşfedin ve damaklarınızı şımartın.</li>
           <li><button>120₺</button></li>
         </ul>
@@ -36,7 +36,7 @@ const Icecream = () => {
     <div className='img-holder-pic'><img src="https://boac-website.s3.eu-central-1.amazonaws.com/icecream_product_brownie.png"/></div>
       <div className='img-holder-text'>
         <ul>
-          <li>Fındıklı Brownie</li>
+          <li><h3>Fındıklı Brownie</h3></li>
           <li>BOAC Soft Serve'de, her zevke uygun çeşitli soft serve dondurma ve el yapımı topping'ler bulabilirsiniz. Yoğun lezzetlerimizi keşfedin ve damaklarınızı şımartın.</li>
           <li><button>90₺</button></li>
         </ul>
