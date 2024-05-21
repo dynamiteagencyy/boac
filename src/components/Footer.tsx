@@ -11,7 +11,7 @@ export default function Footer() {
                         <Nav.Link href="/">Anasayfa</Nav.Link>
                     </Col>
                     <Col xs={12} md={2} lg={2}>
-                        <Nav.Link href="/urunlerimiz">Ürünlerimiz</Nav.Link>
+                        <Nav.Link href="/">Ürünlerimiz</Nav.Link>
                     </Col>
                     <Col xs={12} md={2} lg={2}>
                         <Nav.Link href="/hakkimizda">Hakkımızda</Nav.Link>
