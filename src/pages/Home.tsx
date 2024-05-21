@@ -2,6 +2,7 @@ import { Button, Col, Container, Row, Image, Carousel } from "react-bootstrap";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 import './Home.css';
+import { useEffect, useState } from "react";
 
 interface Comment {
     id: number;
@@ -11,12 +12,22 @@ interface Comment {
 }
 
 export default function Home() {
-    const comments: Comment[] = [
-        { id: 1, comment: 'Ben hayatımda böyle dondurma yemedim!', name: 'Can Görkay', title: 'Müşteri Temsilci Direktörü' },
-        { id: 2, comment: 'Güzel dondurma!', name: 'Ahmet A', title: 'Müşteri' },
-        { id: 3, comment: 'Başarılı', name: 'Mehmet M', title: 'Satış Danışmanı' },
-        { id: 4, comment: 'Lezzetli!', name: 'Yeşim Y', title: 'Personel' }
-    ];
+    const [comments, setComments] = useState<Comment[] | null>(null);
+
+    useEffect(() => {
+        fetch('https://boac-website.s3.eu-central-1.amazonaws.com/comments.json')
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setComments(data)
+          })
+          .catch((error) => {
+          });
+      }, []);
 
     return (
         <Container className="home-container">
@@ -65,7 +76,7 @@ export default function Home() {
                         nextIcon={<LuArrowRight size={40} className="carousel-control-icon" />}
                         prevIcon={<LuArrowLeft size={40} className="carousel-control-icon" />}
                     >
-                        {comments.map((item) => (
+                        {comments ? comments.map((item) => (
                             <Carousel.Item key={item.id}>
                                 <div className="d-block w-100" style={{ height: '200px', backgroundColor: 'white', paddingTop: '80px' }}>
                                     <p className="text-center">{item.comment}</p>
@@ -73,7 +84,7 @@ export default function Home() {
                                     <p className="text-center" style={{marginTop: '-8px'}}>{item.title}</p>
                                 </div>
                             </Carousel.Item>
-                        ))}
+                        )) : <div></div>}
                     </Carousel>
                 </Col>
             </Row>

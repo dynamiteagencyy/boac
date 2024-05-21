@@ -8,6 +8,7 @@
   }
  }
  .container-products-detail {
+  padding: 10vh 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -88,6 +89,10 @@
  .img-holder-text ul li {
   list-style: none;
   padding: 3px;
+  color: #14213d; 
+ }
+ .img-holder-text ul li button {
+  background-color: #14213d; 
  }
  .imgholder button {
   width: 80px;
