@@ -104,14 +104,19 @@
         margin-top: 5vh;
     }
 
+    .about-bg {
+        width: 100%;
+    }
+
     .about-bg-text-1 {
         top: 0;
         left: 15vw;
     }
 
     .about-bg-text-1 p {
-        width: 50vw;
-        margin-top: -1.5vh;
+        width:55vw;
+        margin-top: -1vh;
+        font-size: 0.5rem;
     }
 
     .about-bg-text-2 {
@@ -120,12 +125,13 @@
     }
 
     .about-bg-text-2 p {
-        width: 54vw;
-        margin-top: -2vh;
+        width:60vw;
+        margin-top: -1.8vh;
+        font-size: 0.5rem;
     }
 
     .about-bg-col {
-        margin-top: 10px;
+        margin-top: 25px;
     }
 
     .about-first-text p {
@@ -138,6 +144,16 @@
 
     .about-no-text {
         margin-top: 0;
+    }
+
+    .about-no-text h3 {
+        line-height: 2vh;
+        margin-top: 10px;
+    }
+
+    .about-no-text p {
+        line-height: 1.5vh;
+        margin-top: 8px;
     }
 
     .about-second-text {
@@ -154,19 +170,29 @@
 
     .about-bg-full-text {
         font-size: 0.5rem;
-        line-height: 1vh;
+        line-height: 1.2vh;
     }
 }
 
 @media (max-width: 992px) and (min-width: 600px) {
     .about-bg-text-1 {
-        top: 1vh;
+        top: 0vh;
         left: 15vw;
     }
 
     .about-bg-text-2 {
         top: 1vh;
         right: 15vw;
+    }
+
+    .about-bg-text-1 p {
+        margin-top: -2vh;
+        width: 35vw;
+    }
+
+    .about-bg-text-2 p {
+        margin-top: -3vh;
+        width: 40vw;
     }
 
     .about-no-img {

@@ -21,11 +21,11 @@ export default function Home() {
     return (
         <Container className="home-container">
             <Row>
-                <Col xs={12} md={6} lg={5}>
+                <Col className="home-entry" xs={12} md={6} lg={5}>
                     <h3 style={{ textAlign: 'left' }}>BOAC'a Hoşgeldin!</h3>
-                    <h1 style={{ textAlign: 'left' }}>Bizimle Keşfe Çıkın <br></br> Ve Damaklarınızı Şımartın!</h1>
-                    <p style={{ textAlign: 'left', marginTop: '50px', maxWidth: '30vw' }}>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
-                    <div style={{ textAlign: 'left', marginTop: '50px' }}>
+                    <h1 style={{ textAlign: 'left' }}>Bizimle Keşfe Çıkın <br></br> Ve Damaklarınızı <br></br> Şımartın!</h1>
+                    <p>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
+                    <div>
                         <Button variant="primary">Ürünlere Göz At?</Button>
                     </div>
                 </Col>
@@ -33,11 +33,16 @@ export default function Home() {
 
                 </Col>
             </Row>
-            <div className="gift-design">
-                <div><img style={{width:"50%"}} src="https://boac-website.s3.eu-central-1.amazonaws.com/dog_img.png"/></div>
-                <div><h2>we serve,</h2><h2>you deserve!</h2></div>
-            </div>
-            <Row>
+            <Row className="gift-design">
+                <Col style={{textAlign: 'right'}}>
+                    <img src="https://boac-website.s3.eu-central-1.amazonaws.com/dog_img.png" />
+                </Col>
+                <Col>
+                    <h1>We Serve,</h1>
+                    <h1>You Deserve!</h1>
+                </Col>
+            </Row>
+            <Row className="ozgun-tasarim-row">
                 <Col className="ozgun-tasarim-col" xs={12} md={12} lg={4}>
                     <Image
                         className="ozgun-tasarim-img-1"
@@ -50,22 +55,22 @@ export default function Home() {
                 </Col>
             </Row>
             <Row>
-                <Col style={{marginBottom: '-80px', zIndex: '2000'}}>
+                <Col style={{ marginBottom: '-80px', zIndex: '2000' }}>
                     <h1>Müşterilerimiz Ne Düşünüyor?<br></br>"</h1>
                 </Col>
             </Row>
             <Row>
-                <Col style={{padding: '0 80px'}}>
+                <Col className="comments-carousel">
                     <Carousel
                         nextIcon={<LuArrowRight size={40} className="carousel-control-icon" />}
                         prevIcon={<LuArrowLeft size={40} className="carousel-control-icon" />}
                     >
                         {comments.map((item) => (
                             <Carousel.Item key={item.id}>
-                                <div className="d-block w-100" style={{ height: '200px', backgroundColor: 'white', paddingTop: '80px'}}>
-                                    <p className="text-center" style={{marginBottom: '30px'}}>{item.comment}</p>
-                                    <p className="text-center" style={{fontSize: '16px', fontWeight: 'bold', margin: '0'}}>{item.name}</p>
-                                    <p className="text-center">{item.title}</p>
+                                <div className="d-block w-100" style={{ height: '200px', backgroundColor: 'white', paddingTop: '80px' }}>
+                                    <p className="text-center">{item.comment}</p>
+                                    <h1 className="text-center" style={{ margin: '0' }}>{item.name}</h1>
+                                    <p className="text-center" style={{marginTop: '-8px'}}>{item.title}</p>
                                 </div>
                             </Carousel.Item>
                         ))}
