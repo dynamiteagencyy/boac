@@ -33,6 +33,10 @@ export default function Home() {
 
                 </Col>
             </Row>
+            <div className="gift-design">
+                <div><img style={{width:"50%"}} src="https://boac-website.s3.eu-central-1.amazonaws.com/dog_img.png"/></div>
+                <div><h2>we serve,</h2><h2>you deserve!</h2></div>
+            </div>
             <Row>
                 <Col className="ozgun-tasarim-col" xs={12} md={12} lg={4}>
                     <Image
