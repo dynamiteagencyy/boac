@@ -1,0 +1,21 @@
+.location-container {
+    background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/contact_bg.png");
+    height: 80vh;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    margin-top: 10vh;
+}
+
+.location-container .google-map {
+    width: 600px;
+    height: 450px;
+}
+
+@media (max-width: 600px) {
+    .location-container .google-map {
+        width: 300px;
+    }
+}

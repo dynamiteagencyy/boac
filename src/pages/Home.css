@@ -1,5 +1,5 @@
 .home-container {
-    padding: 7vh 0;
+    padding: 7vh 0 2vh 0;
     margin: 0 10vw;
     max-width: fit-content;
 }
@@ -110,7 +110,7 @@
 
 @media (max-width: 600px) {
     .home-container {
-        padding: 1vh 0;
+        padding-top: 1vh;
     }
 
     .home-entry p {
@@ -176,5 +176,6 @@
         width: 25px;
         height: 25px;
         padding: 3px;
+        margin-top: -10px;
     }
 }

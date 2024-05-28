@@ -83,10 +83,9 @@ export default function Home() {
                     >
                         {comments ? comments.map((item) => (
                             <Carousel.Item key={item.id}>
-                                <div className="d-block w-100" style={{ height: '200px', backgroundColor: 'white', paddingTop: '80px' }}>
-                                    <p className="text-center">{item.comment}</p>
-                                    <h1 className="text-center" style={{ margin: '0' }}>{item.name}</h1>
-                                    <p className="text-center" style={{ marginTop: '-8px' }}>{item.title}</p>
+                                <div className="d-block w-100" style={{ height: '300px', backgroundColor: 'white', paddingTop: '80px' }}>
+                                    <p className="text-center" style={{padding: '0 15vw', textAlign: 'left'}}>{item.comment}</p>
+                                    <h1 className="text-center" style={{ marginTop: '-10px' }}>{item.name}</h1>
                                 </div>
                             </Carousel.Item>
                         )) : <div></div>}
