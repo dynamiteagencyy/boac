@@ -14,7 +14,7 @@ export default function CustomNavbar() {
     return (
         <Navbar variant="custom" expand="lg" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <Image
                         width="150px"
                         src="https://boac-website.s3.eu-central-1.amazonaws.com/logo.png" />
@@ -27,7 +27,7 @@ export default function CustomNavbar() {
                         <Nav.Link href="/hakkimizda" active={activeLink === '/hakkimizda'}>Hakkımızda</Nav.Link>
                         <Nav.Link href="/iletisim" active={activeLink === '/iletisim'}>İletişim</Nav.Link>
                     </Nav>
-                    <Button variant="primary">BOAC Nerede?</Button>
+                    <Button href="/boac-nerede" variant="primary">BOAC Nerede?</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

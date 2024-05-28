@@ -31,20 +31,20 @@ export default function Footer() {
                 <Col>
                     <Image
                         width="120px"
-                        src="https://boac-website.s3.eu-central-1.amazonaws.com/logo_white.png" />
+                        src="https://boac-website.s3.eu-central-1.amazonaws.com/logo.png" />
                 </Col>
             </Row>
             <Row style={{marginTop: '20px'}}>
                 <Col>
                     <p style={{fontSize: '10px', margin: '0'}}>Designed by Dynamite Agency<br></br>2024</p>
                     <p>
-                        <a style={{color: 'white'}} href="https://www.google.com" target="_blank">
+                        <a style={{color: 'white'}} href="https://www.facebook.com/profile.php?id=61557954306563&locale=tr_TR" target="_blank">
                             <FaFacebookF style={{cursor: 'pointer'}}></FaFacebookF>
                         </a>
-                        <a style={{color: 'white', margin: '0 30px'}} href="https://www.google.com" target="_blank">
+                        <a style={{color: 'white', margin: '0 30px'}} href="https://www.instagram.com/boacsoftserve" target="_blank">
                             <FaInstagram style={{cursor: 'pointer'}}></FaInstagram>
                         </a>
-                        <a style={{color: 'white'}} href="https://www.google.com" target="_blank">
+                        <a style={{color: 'white'}} href="https://www.tiktok.com/@boacsoftserve?is_from_webapp=1&sender_device=pc" target="_blank">
                             <FaTiktok style={{cursor: 'pointer'}}></FaTiktok>
                         </a>
                     </p>

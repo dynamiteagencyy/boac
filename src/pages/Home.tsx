@@ -13,21 +13,25 @@ interface Comment {
 
 export default function Home() {
     const [comments, setComments] = useState<Comment[] | null>(null);
+    const COMMENTS_URL = 'https://boac-website.s3.eu-central-1.amazonaws.com/comments.json';
 
     useEffect(() => {
-        fetch('https://boac-website.s3.eu-central-1.amazonaws.com/comments.json')
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json();
-          })
-          .then((data) => {
-            setComments(data)
-          })
-          .catch((error) => {
-          });
-      }, []);
+        fetch(COMMENTS_URL, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            mode: 'cors'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => setComments(data))
+            .catch(error => console.error('Error:', error));
+    }, []);
 
     return (
         <Container className="home-container">
@@ -45,8 +49,9 @@ export default function Home() {
                 </Col>
             </Row>
             <Row className="gift-design">
-                <Col style={{textAlign: 'right'}}>
-                    <img src="https://boac-website.s3.eu-central-1.amazonaws.com/dog_img.png" />
+                <Col style={{ textAlign: 'right' }}>
+                    <Image
+                        src="https://boac-website.s3.eu-central-1.amazonaws.com/cat.gif" />
                 </Col>
                 <Col>
                     <h1>We Serve,</h1>
@@ -78,10 +83,9 @@ export default function Home() {
                     >
                         {comments ? comments.map((item) => (
                             <Carousel.Item key={item.id}>
-                                <div className="d-block w-100" style={{ height: '200px', backgroundColor: 'white', paddingTop: '80px' }}>
-                                    <p className="text-center">{item.comment}</p>
-                                    <h1 className="text-center" style={{ margin: '0' }}>{item.name}</h1>
-                                    <p className="text-center" style={{marginTop: '-8px'}}>{item.title}</p>
+                                <div className="d-block w-100" style={{ height: '300px', backgroundColor: 'white', paddingTop: '80px' }}>
+                                    <p className="text-center" style={{padding: '0 15vw', textAlign: 'left'}}>{item.comment}</p>
+                                    <h1 className="text-center" style={{ marginTop: '-10px' }}>{item.name}</h1>
                                 </div>
                             </Carousel.Item>
                         )) : <div></div>}
