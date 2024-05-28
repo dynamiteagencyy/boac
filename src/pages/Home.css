@@ -1,7 +1,11 @@
 .home-container {
     padding: 7vh 0;
-    margin: 0 10vw;
-    max-width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
 }
 
 .home-entry p {

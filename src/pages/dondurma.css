@@ -1,0 +1,152 @@
+
+.containerdeneme {
+    position: absolute;
+    top: 66px;
+    left: 770px;
+    width: 240px;
+    height: 480px;
+    border: 0px solid white;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-right: 0;
+    z-index: 4;
+    background-color: white;
+    overflow: hidden;
+   }
+
+   .animation {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    background-color: black;
+    z-index: 1;
+    animation: fill 15s linear infinite;
+   }
+
+   .container2 {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 240px;
+    height: 475px;
+    border: 3px solid lightgray;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-right: 0;
+    opacity: 4;
+    z-index: 5;
+    background-color: white;
+   }
+   .pictures {
+    visibility: visible;
+    z-index: 22220303;
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: transparent;
+    top: 95px;
+    left: 810px;
+    border-radius: 230px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_1.png");
+   }
+
+   .Dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    visibility: visible;
+    z-index: 6;
+    transition: background-color 0.5s;
+   }
+   .text1 {
+    position: absolute;
+    top: 40px;
+    left: 930px;
+   }
+   .text2 {
+    position: absolute;
+    top: 90px;
+    left: 750px;
+   }
+   .text3 {
+    position: absolute;
+    top: 212px;
+    left: 666px;
+   }
+   .text4 {
+    position: absolute;
+    top: 360px;
+    left: 670px;
+   }
+   .text5 {
+    position: absolute;
+    top: 500px;
+    left: 700px;
+   }
+   .text6 {
+    position: absolute;
+    top: 550px;
+    left: 930px;
+   }
+   .Dot1 {
+    top: 64px;
+    left: 1000px;
+   }
+   .Dot2 {
+    top: 106px;
+    left: 870px;
+   }
+   .Dot3 {
+    top: 220px;
+    left: 782px;
+   }
+   .Dot4 {
+    top: 366px;
+    left: 774px;
+   }
+   .Dot5 {
+    top: 488px;
+    left: 856px;
+   }
+   .Dot6 {
+    top: 540px;
+    left: 1000px;
+   }
+   .Dot.active {
+    background-color: black;
+   }
+
+   @keyframes fill {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+   }
+   .bg-daire{
+    position: absolute;
+    left:1000px;
+    top:100px;
+    width:400px;
+    height:400px;
+    background-color: #14213d;
+    border-radius: 300px;
+   }
+   .bg-daire-inner{
+    position: relative;
+    top:70px;
+    left:65px;
+    z-index: 100;
+    width:260px;
+    height: 260px;
+    background-color: white;
+    border-radius: 400px;
+   }
