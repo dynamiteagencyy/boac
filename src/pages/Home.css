@@ -1,11 +1,7 @@
 .home-container {
-    padding: 7vh 0;
-    max-width: 100%;
+    padding: 7vh 10vw;
+    max-width: 100vw;
     overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-
 }
 
 .home-entry p {
@@ -115,6 +111,8 @@
 @media (max-width: 600px) {
     .home-container {
         padding-top: 1vh;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .home-entry p {
