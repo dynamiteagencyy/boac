@@ -3,7 +3,7 @@ import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 import './Home.css';
 import './dondurma.css';
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, act } from "react";
 
 interface Comment {
     id: number;
@@ -12,38 +12,60 @@ interface Comment {
 }
 
 export default function Home() {
-    const [comments, setComments] = useState<Comment[] | null>(null);
-    const [activeDot, setActiveDot] = useState(0);
     const COMMENTS_URL = 'https://boac-website.s3.eu-central-1.amazonaws.com/comments.json';
-    const dotHeights = [478, 430, 308, 162, 44, 0];
+    const dotHeights = [472, 413, 300, 170, 52, 0];
+    const dotImages = [
+        { dot: 6, name: "yabanmersini", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_yabanmersini.png" },
+        { dot: 5, name: "karisik", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_karisik.png" },
+        { dot: 4, name: "cilek", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_cilek.png" },
+        { dot: 3, name: "tuzlukaramel", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_tuzlukaramel.png" },
+        { dot: 2, name: "baklava", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_baklava.png" },
+        { dot: 1, name: "brownie", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_brownie.png" }
+    ];
     const animationRef = useRef(null);
-    const delay = 30000;
+
+    const [comments, setComments] = useState<Comment[] | null>(null);
+    const [activeDot, setActiveDot] = useState(6);
+    const [fade, setFade] = useState('fade-in');
+    const [animationBgImage, setAnimationBgImage] = useState(dotImages.find(item => item.dot == 1)?.url);
 
     useEffect(() => {
         const updateActiveDot = () => {
-            const animation = animationRef.current;
+            const animation: any = animationRef.current;
             if (animation) {
                 const height = parseFloat(getComputedStyle(animation).height);
-                if (height < 44) {
+                if (height < 52) {
                     setActiveDot(6);
-                } else if (height >= 44 && height < 162) {
+                } else if (height >= 52 && height < 170) {
                     setActiveDot(5);
-                } else if (height >= 162 && height < 308) {
+                } else if (height >= 170 && height < 300) {
                     setActiveDot(4);
-                } else if (height >= 308 && height < 430) {
+                } else if (height >= 300 && height < 413) {
                     setActiveDot(3);
-                } else if (height >= 430 && height < 478) {
+                } else if (height >= 413 && height < 472) {
                     setActiveDot(2);
-                } else if (height >= 478) {
+                } else if (height >= 472) {
+                    animation.style.animation = 'none';
+                    animation.style.transition = 'none';
+                    animation.style.height = '480px'
                     setActiveDot(1);
+                    setTimeout(() => {
+                        animation.style.animation = 'fill 15s linear infinite';
+                    }, 3000);
                 }
             }
         };
-        const interval = setInterval(updateActiveDot, 100);
+        setFade('fade-out');
+        setTimeout(() => {
+            setAnimationBgImage(dotImages.find(item => item.dot == activeDot)?.url);
+            setFade('fade-in');
+        }, 500);
+        const interval = setInterval(updateActiveDot, 200);
         return () => {
             clearInterval(interval);
         };
     }, [activeDot]);
+
     const handleDotClick = (index: any) => {
         setActiveDot(index);
         const animation: any = animationRef.current;
@@ -53,15 +75,13 @@ export default function Home() {
             animation.style.transition = 'none';
             animation.style.height = `${newHeight}px`;
             setTimeout(() => {
-                const duration = ((478 - newHeight) / 478) * 30000;
+                const duration = ((472 - newHeight) / 472) * 30000;
                 animation.style.transition = `height ${duration}ms linear`;
-                animation.style.height = '500px';
-                setTimeout(() => {
-                    animation.style.animation = 'fill 30s linear infinite';
-                }, duration);
+                animation.style.height = '480px';
             }, 50);
         }
     };
+
     useEffect(() => {
         fetch(COMMENTS_URL, {
             method: 'GET',
@@ -92,23 +112,23 @@ export default function Home() {
                     </div>
                 </Col>
                 <Col xs={12} md={7} lg={7} className="photo-animate-col">
-                    <div className="bg-daire"></div>
-                    <div className='pictures'></div>
+                    <div className="bg-daire"><div className="bg-daire-inner"></div></div>
+                    <div className={`pictures ${fade}`} style={{ backgroundImage: `url(${animationBgImage})` }}></div>
                     <div className="containerdeneme">
                         <div className='animation' ref={animationRef}></div>
                     </div>
                     <div className="container2">
-                        <p className='text1'>Fındıklı Brownie</p>
+                        <p className='text1' onClick={() => handleDotClick(1)}>Fındıklı Brownie</p>
                         <div className={`Dot Dot1 ${activeDot === 1 ? 'active' : ''}`} onClick={() => handleDotClick(1)}></div>
-                        <p className='text2'>Fındıklı Baklava</p>
+                        <p className='text2' onClick={() => handleDotClick(2)}>Fındıklı Baklava</p>
                         <div className={`Dot Dot2 ${activeDot === 2 ? 'active' : ''}`} onClick={() => handleDotClick(2)}></div>
-                        <p className='text3'>Tuzlu Karamel</p>
+                        <p className='text3' onClick={() => handleDotClick(3)}>Tuzlu Karamel</p>
                         <div className={`Dot Dot3 ${activeDot === 3 ? 'active' : ''}`} onClick={() => handleDotClick(3)}></div>
-                        <p className='text4'>Çilekli Yoğurt</p>
+                        <p className='text4' onClick={() => handleDotClick(4)}>Çilekli Yoğurt</p>
                         <div className={`Dot Dot4 ${activeDot === 4 ? 'active' : ''}`} onClick={() => handleDotClick(4)}></div>
-                        <p className='text5'>Karışık Meyveli Yoğurt</p>
+                        <p className='text5' onClick={() => handleDotClick(5)}>Karışık Meyveli Yoğurt</p>
                         <div className={`Dot Dot5 ${activeDot === 5 ? 'active' : ''}`} onClick={() => handleDotClick(5)}></div>
-                        <p className='text6'>Yabanmersinli Yoğurt</p>
+                        <p className='text6' onClick={() => handleDotClick(6)}>Yabanmersinli Yoğurt</p>
                         <div className={`Dot Dot6 ${activeDot === 6 ? 'active' : ''}`} onClick={() => handleDotClick(6)}></div>
                     </div>
                 </Col>
