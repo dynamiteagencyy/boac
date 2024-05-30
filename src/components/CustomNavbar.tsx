@@ -23,7 +23,7 @@ export default function CustomNavbar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/" active={activeLink === '/'}>Anasayfa</Nav.Link>
-                        <Nav.Link href="/" active={activeLink === '/urunlerimiz'}>Ürünlerimiz</Nav.Link>
+                        <Nav.Link href="/urunlerimiz" active={activeLink === '/urunlerimiz'}>Ürünlerimiz</Nav.Link>
                         <Nav.Link href="/hakkimizda" active={activeLink === '/hakkimizda'}>Hakkımızda</Nav.Link>
                         <Nav.Link href="/iletisim" active={activeLink === '/iletisim'}>İletişim</Nav.Link>
                     </Nav>

@@ -1,9 +1,15 @@
-.img-pull-left-side:hover{
+.img-pull-left-side:hover {
 
-       transform:rotate(-15deg);
-    -ms-transform:rotate(-15deg);
+    transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
     /* IE 9 */
-    -webkit-transform:rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
     z-index: -1;
 }
 
+
+@media (max-width: 600px) {
+    .products-container {
+        margin-bottom: -50px;
+    }
+}

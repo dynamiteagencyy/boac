@@ -1,4 +1,4 @@
-.containerdeneme {
+.animation-container {
   position: relative;
   left: 20%;
   width: 240px;
@@ -27,7 +27,7 @@
   animation: fill 15s linear infinite;
 }
 
-.container2 {
+.text-container {
   position: absolute;
   top: 0%;
   left: 21.3%;
@@ -135,8 +135,13 @@
 }
 
 .Dot.active {
-  background-color: black;
+  background-color: white;
 }
+
+.location-icon {
+  margin-top: -15px;
+  margin-left: -5px;
+} 
 
 @keyframes fill {
   0% {
@@ -222,7 +227,7 @@
     margin-top: 50px;
   }
 
-  .container2 {
+  .text-container {
     left: 22%;
   }
 
@@ -282,7 +287,7 @@
     right: -15vw;
   }
   
-  .container2 {
+  .text-container {
     left: 21.5%;
   }
 }
@@ -300,7 +305,7 @@
     top: 15%;
   }
 
-  .container2 {
+  .text-container {
     left: 22%;
   }
 
@@ -317,7 +322,7 @@
     margin-right: -7vw;
   }
 
-  .container2 {
+  .text-container {
     left: 22%;
   }
 

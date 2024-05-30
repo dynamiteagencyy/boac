@@ -6,10 +6,6 @@ import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Products from './pages/Products';
-import Icecream from './pages/Icecream';
-import Cones from './pages/Cones';
-import Yogurts from './pages/Yogurts';
-import Drinks from './pages/Drinks';
 import Location from './pages/Location';
 
 function App() {
@@ -23,10 +19,6 @@ function App() {
           <Route path="/hakkimizda" Component={About} />
           <Route path="/iletisim" Component={Contact} />
           <Route path="/boac-nerede" Component={Location} />
-          <Route path="/urunlerimiz/dondurmalarimiz" Component={Icecream} />
-          <Route path="/urunlerimiz/yogurtlarimiz" Component={Yogurts} />
-          <Route path="/urunlerimiz/külahlarimiz" Component={Cones} />
-          <Route path="/urunlerimiz/içeceklerimiz" Component={Drinks} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
