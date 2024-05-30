@@ -83,7 +83,7 @@ export default function Home() {
     return (
         <Container className="home-container">
             <Row>
-                <Col className="home-entry" xs={6} md={5} lg={5} style={{ paddingLeft: '40px' }}>
+                <Col className="home-entry" xs={12} md={5} lg={5} style={{ paddingLeft: '40px' }}>
                     <h3 style={{ textAlign: 'left' }}>BOAC'a Hoşgeldin!</h3>
                     <h1 style={{ textAlign: 'left' }}>Bizimle Keşfe Çıkın <br></br> Ve Damaklarınızı <br></br> Şımartın!</h1>
                     <p>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
@@ -91,24 +91,25 @@ export default function Home() {
                         <Button href="/" variant="primary">Ürünlere Göz At?</Button>
                     </div>
                 </Col>
-                <Col xs={6} md={7} lg={7} className="photo-animate-col">
+                <Col xs={12} md={7} lg={7} className="photo-animate-col">
                     <div className="bg-daire"></div>
                     <div className='pictures'></div>
-                    <p className='text1'>Fındıklı Brownie</p>
-                    <div className={`Dot Dot1 ${activeDot === 1 ? 'active' : ''}`} onClick={() => handleDotClick(1)}></div>
-                    <p className='text2'>Fındıklı Baklava</p>
-                    <div className={`Dot Dot2 ${activeDot === 2 ? 'active' : ''}`} onClick={() => handleDotClick(2)}></div>
-                    <p className='text3'>Tuzlu Karamel</p>
-                    <div className={`Dot Dot3 ${activeDot === 3 ? 'active' : ''}`} onClick={() => handleDotClick(3)}></div>
-                    <p className='text4'>Çilekli Yoğurt</p>
-                    <div className={`Dot Dot4 ${activeDot === 4 ? 'active' : ''}`} onClick={() => handleDotClick(4)}></div>
-                    <p className='text5'>Karışık Meyveli Yoğurt</p>
-                    <div className={`Dot Dot5 ${activeDot === 5 ? 'active' : ''}`} onClick={() => handleDotClick(5)}></div>
-                    <p className='text6'>Yabanmersinli Yoğurt</p>
-                    <div className={`Dot Dot6 ${activeDot === 6 ? 'active' : ''}`} onClick={() => handleDotClick(6)}></div>
                     <div className="containerdeneme">
                         <div className='animation' ref={animationRef}></div>
-                        <div className="container2"></div>
+                    </div>
+                    <div className="container2">
+                        <p className='text1'>Fındıklı Brownie</p>
+                        <div className={`Dot Dot1 ${activeDot === 1 ? 'active' : ''}`} onClick={() => handleDotClick(1)}></div>
+                        <p className='text2'>Fındıklı Baklava</p>
+                        <div className={`Dot Dot2 ${activeDot === 2 ? 'active' : ''}`} onClick={() => handleDotClick(2)}></div>
+                        <p className='text3'>Tuzlu Karamel</p>
+                        <div className={`Dot Dot3 ${activeDot === 3 ? 'active' : ''}`} onClick={() => handleDotClick(3)}></div>
+                        <p className='text4'>Çilekli Yoğurt</p>
+                        <div className={`Dot Dot4 ${activeDot === 4 ? 'active' : ''}`} onClick={() => handleDotClick(4)}></div>
+                        <p className='text5'>Karışık Meyveli Yoğurt</p>
+                        <div className={`Dot Dot5 ${activeDot === 5 ? 'active' : ''}`} onClick={() => handleDotClick(5)}></div>
+                        <p className='text6'>Yabanmersinli Yoğurt</p>
+                        <div className={`Dot Dot6 ${activeDot === 6 ? 'active' : ''}`} onClick={() => handleDotClick(6)}></div>
                     </div>
                 </Col>
             </Row>

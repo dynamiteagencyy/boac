@@ -22,15 +22,15 @@
   width: 240px;
   bottom: 0;
   height: 0;
-  background-color: black;
+  background-color: #14213d;
   z-index: 1;
   animation: fill 15s linear infinite;
 }
 
 .container2 {
   position: absolute;
-  top: 0px;
-  left: 3px;
+  top: 0%;
+  left: 21.3%;
   width: 240px;
   height: 480px;
   border: 2px solid lightgray;
@@ -56,68 +56,69 @@
 
 .text1 {
   position: absolute;
-  top: -30px;
-  left: 45%;
+  top: -50px;
+  left: 90%;
+  overflow: hidden;
 }
 
 .text2 {
   position: absolute;
-  top: 55px;
-  left: 14%;
+  top: 40px;
+  left: -17%;
 }
 
 .text3 {
   position: absolute;
   top: 160px;
-  left: 7%;
+  left: -45%;
 }
 
 .text4 {
   position: absolute;
   top: 295px;
-  left: 8%;
+  left: -43%;
 }
 
 .text5 {
   position: absolute;
   top: 415px;
-  left: 9.5%;
+  left: -35%;
 }
 
 .text6 {
   position: absolute;
-  top: 495px;
-  left: 42%;
+  top: 485px;
+  left: 80%;
 }
 
 .Dot1 {
-  top: -5px;
-  left: 53%;
+  top: -7px;
+  left: 99%;
 }
 
 .Dot2 {
-  top: 66px;
-  left: 30.5%;
+  top: 52px;
+  left: 31.5%;
 }
 
 .Dot3 {
   top: 170px;
-  left: 22%;
+  left: 1%;
 }
 
 .Dot4 {
   top: 300px;
-  left: 22%;
+  left: 1%;
 }
 
 .Dot5 {
   top: 413px;
-  left: 31.5%;
+  left: 32%;
 }
 
 .Dot6 {
-  top: 475px;
-  left: 53%;
+  top: 472px;
+  left: 96%;
 }
 
 .Dot.active {
@@ -165,319 +166,147 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .text1 {
-    left: 60%;
-    top: -10px;
-  }
-
-  .Dot1 {
-    left: 96%;
-    top: 8px;
-  }
-
-  .text2 {
-    left: 18%;
-  }
-
-  .Dot2 {
-    left: 53%;
-  }
-
-  .text3 {
-    left: -10px;
-  }
-
-  .Dot3 {
-    left: 26%;
-  }
-
-  .text4 {
-    left: -10px;
-  }
-
-  .Dot4 {
-    left: 26%;
-  }
-
-  .text5 {
-    left: 7%;
-  }
-
-  .Dot5 {
-    left: 56%;
-  }
-
-  .text6 {
-    left: 52%;
-    top: 100%;
-  }
-
-  .Dot6 {
-    left: 96%;
-    top: 97%;
-  }
-
-  .photo-animate-col {
-    left: -10px;
-  }
-
-  .pictures {
-    width: 300px;
-    height: 300px;
-    top: 7vh;
-    margin-right: -50vw;
-  }
-
-  .bg-daire {
-    display: none;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media (max-width: 768px) and (min-width: 600px) {
-  .text1 {
-    left: 85%;
-    top: -40px;
-  }
-
-  .Dot1 {
-    left: 100%;
-  }
-
-  .text2 {
-    left: 15%;
-  }
-
-  .Dot2 {
-    left: 44.5%;
-  }
-
-  .text3 {
-    left: -10px;
-  }
-
-  .Dot3 {
-    left: 25%;
-  }
-
-  .text4 {
-    left: -10px;
-  }
-
-  .Dot4 {
-    left: 24.5%;
-  }
-
-  .text5 {
-    left: 5%;
-  }
-
-  .Dot5 {
-    left: 47.5%;
-  }
-
-  .text6 {
-    left: 70%;
-  }
-
-  .Dot6 {
-    left: 100%;
-  }
-
-  .photo-animate-col {
-    left: 50px;
-  }
-
-  .pictures {
-    width: 300px;
-    height: 300px;
-    top: 9vh;
-    margin-right: -20vw;
-  }
-
-  .bg-daire {
-    display: none;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media (max-width: 992px) and (min-width: 768px) {
-  .text1 {
-    left: 55%;
-  }
-
-  .Dot1 {
-    left: 70%;
-  }
-
-  .text2 {
-    left: 15%;
-  }
-
-  .Dot2 {
-    left: 35.5%;
-  }
-
-  .text3 {
-    left: 4%;
-  }
-
-  .Dot3 {
-    left: 23%;
-  }
-
-  .text4 {
-    left: 4.5%;
-  }
-
-  .Dot4 {
-    left: 23%;
-  }
-
-  .text5 {
-    left: 9%;
-  }
-
-  .Dot5 {
-    left: 37.5%;
-  }
-
-  .text6 {
-    left: 48%;
-  }
-
-  .Dot6 {
-    left: 70%;
-  }
-
   .photo-animate-col {
     left: 100px;
   }
 
   .pictures {
-    width: 340px;
-    height: 340px;
-    top: 5vh;
-    margin-right: -10vw;
+    width: 300px;
+    height: 300px;
+    top: 8vh;
+    right: 0;
   }
 
   .bg-daire {
-    width: 15vw;
-    height: 80%;
-    margin-top: 5vh;
+    display: none;
+  }
+
+  .photo-animate-col {
+    left: 50px;
+    margin-top: 50px;
+  }
+
+  .container2 {
+    left: 22%;
+  }
+
+  .text1 {
+    position: absolute;
+    top: -40px;
+    left: 85%;
+    overflow: hidden;
+  }
+  
+  .text2 {
+    position: absolute;
+    top: 40px;
+    left: 0%;
+  }
+  
+  .text3 {
+    position: absolute;
+    top: 160px;
+    left: -30%;
+  }
+  
+  .text4 {
+    position: absolute;
+    top: 295px;
+    left: -30%;
+  }
+  
+  .text5 {
+    position: absolute;
+    top: 415px;
+    left: -15%;
+  }
+  
+  .text6 {
+    position: absolute;
+    top: 485px;
+    left: 75%;
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (max-width: 1200px) and (min-width: 992px) {
-  .text1 {
-    left: 52%;
-  }
-
-  .Dot1 {
-    left: 63%;
-  }
-
-  .text2 {
-    left: 12%;
-  }
-
-  .Dot2 {
-    left: 33.5%;
-  }
-
-  .text3 {
-    left: 3.5%;
-  }
-
-  .Dot3 {
-    left: 22.5%;
-  }
-
-  .text4 {
-    left: 4%;
-  }
-
-  .Dot4 {
-    left: 22.5%;
-  }
-
-  .text5 {
-    left: 6%;
-  }
-
-  .Dot5 {
-    left: 35%;
-  }
-
-  .text6 {
-    left: 47%;
-  }
-
-  .Dot6 {
-    left: 63%;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 768px) and (min-width: 600px) {
+  .photo-animate-col {
+    left: 50px;
   }
 
   .pictures {
-    width: 380px;
-    height: 380px;
-    top: 3vh;
+    width: 340px;
+    height: 340px;
+    top: 6vh;
+    right: 10vw;
+  }
+
+  .bg-daire {
+    top: 5vh;
+    width: 20vw;
+    height: 80%;
+  }
+  
+  .container2 {
+    left: 21.5%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 992px) and (min-width: 768px) {
+  .pictures {
+    width: 340px;
+    height: 340px;
+    top: 6vh;
+    right: 0;
+  }
+
+  .bg-daire {
+    top: 6vh;
+    width: 20vw;
+    height: 80%;
+  }
+
+  .container2 {
+    left: 22%;
+  }
+
+  .photo-animate-col {
+    left: 100px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .pictures {
+    width: 320px;
+    height: 320px;
+    top: 6vh;
     margin-right: -7vw;
+  }
+
+  .bg-daire {
+    top: 4.5vh;
+    width: 20vw;
+    height: 80%;
+  }
+
+  .container2 {
+    left: 22%;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (max-width: 1400px) and (min-width: 1200px) {
+  .pictures {
+    width: 360px;
+    height: 360px;
+    top: 3vh;
+    margin-right: -7vw;
+  }
+
   .bg-daire {
+    margin-top: 2vh;
     width: 20vw;
-    height: 90%;
-  }
-
-  .text1 {
-    left: 47%;
-  }
-
-  .Dot1 {
-    left: 60%;
-  }
-
-  .text2 {
-    left: 13%;
-  }
-
-  .Dot2 {
-    left: 32.5%;
-  }
-
-  .text3 {
-    left: 4.5%;
-  }
-
-  .Dot3 {
-    left: 22.5%;
-  }
-
-  .text4 {
-    left: 5%;
-  }
-
-  .Dot4 {
-    left: 22.5%;
-  }
-
-  .text5 {
-    left: 6%;
-  }
-
-  .Dot5 {
-    left: 33.5%;
-  }
-
-  .text6 {
-    left: 47%;
-  }
-
-  .Dot6 {
-    left: 60%;
+    height: 80%;
   }
 }
