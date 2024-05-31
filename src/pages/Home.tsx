@@ -51,15 +51,15 @@ export default function Home() {
                     animation.style.height = '480px'
                     setActiveDot(1);
                     setTimeout(() => {
-                        animation.style.animation = 'fill 15s linear infinite';
+                        animation.style.animation = 'fill 20s linear infinite';
                     }, 3000);
                 }
             }
         };
-        setFade('fade-out');
+        setFade('');
         setTimeout(() => {
             setAnimationBgImage(dotImages.find(item => item.dot == activeDot)?.url);
-            setFade('fade-in');
+            setFade('rotate');
         }, 500);
         const interval = setInterval(updateActiveDot, 200);
         return () => {
@@ -68,7 +68,6 @@ export default function Home() {
     }, [activeDot]);
 
     const handleDotClick = (index: any) => {
-        setActiveDot(index);
         const animation: any = animationRef.current;
         if (animation) {
             const newHeight = dotHeights[index - 1];
@@ -81,6 +80,7 @@ export default function Home() {
                 animation.style.height = '480px';
             }, 50);
         }
+        setActiveDot(index);
     };
 
     useEffect(() => {

@@ -24,7 +24,7 @@
   height: 0;
   background-color: #14213d;
   z-index: 1;
-  animation: fill 15s linear infinite;
+  animation: fill 20s linear infinite;
 }
 
 .text-container {
@@ -143,6 +143,15 @@
   margin-left: -5px;
 } 
 
+@keyframes rotate360 {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
 @keyframes fill {
   0% {
     height: 0;
@@ -190,15 +199,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_yabanmersini.png");
-  transition: right 1s linear;
+  transition: 2s opacity ease-in-out, 600ms transform ease;
+  opacity: 0;
 }
 
-.fade-out {
-  right: -1000px !important;
-}
 
-.fade-in {
-  right: 20% !important;
+.rotate {
+  transform: rotate(360deg);
+  opacity: 1;
 }
 
 /* Extra small devices (phones, 600px and down) */

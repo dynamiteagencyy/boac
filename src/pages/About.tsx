@@ -9,10 +9,10 @@ interface Image {
 
 export default function About() {
     const images: Image[] = [
-        { id: 1, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' },
-        { id: 2, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' },
-        { id: 3, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' },
-        { id: 4, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_carousel_1.png' }
+        { id: 1, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_slider_img_1.jpg' },
+        { id: 2, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_slider_img_2.jpg' },
+        { id: 3, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_slider_img_3.jpg' },
+        { id: 4, url: 'https://boac-website.s3.eu-central-1.amazonaws.com/about_slider_img_4.jpg' }
     ];
 
     return (
