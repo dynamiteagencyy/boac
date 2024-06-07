@@ -1,7 +1,6 @@
 .contact-container {
     background-image: url("https://boac-website.s3.eu-central-1.amazonaws.com/contact_bg.png");
     height: 80vh;
-    background-attachment: local;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

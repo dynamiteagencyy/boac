@@ -27,7 +27,7 @@ export default function About() {
                 <Row>
                     <Col className='about-bg-col'>
                         <Image
-                            className="about-bg"
+                            className="about-bg-img-1"
                             src="https://boac-website.s3.eu-central-1.amazonaws.com/about_bg_1.png" />
                         <div className='about-bg-text-1'>
                             <h1>Vizyonumuz</h1>
@@ -38,7 +38,7 @@ export default function About() {
                 <Row>
                     <Col className='about-bg-col'>
                         <Image
-                            className="about-bg"
+                            className="about-bg-img-2"
                             src="https://boac-website.s3.eu-central-1.amazonaws.com/about_bg_2.png" />
                         <div className='about-bg-text-2'>
                             <h1>Misyonumuz</h1>

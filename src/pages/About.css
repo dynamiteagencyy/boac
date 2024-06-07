@@ -6,8 +6,14 @@
     margin: 0;
 }
 
-.about-bg {
+.about-bg-img-1 {
     width: 80%;
+    margin-left: 50px;
+}
+
+.about-bg-img-2 {
+    width: 80%;
+    margin-top: -50px;
 }
 
 .about-bg-full-img {
@@ -18,8 +24,8 @@
 
 .about-bg-text-1 {
     position: absolute;
-    top: 6vh;
-    left: 12vw;
+    top: 5vh;
+    left: 15vw;
     color: white;
     text-align: left;
 }
@@ -30,8 +36,8 @@
 
 .about-bg-text-2 {
     position: absolute;
-    top: 6vh;
-    right: 12vw;
+    top: 0vh;
+    right: 15vw;
     color: white;
     text-align: right;
 }
@@ -74,6 +80,7 @@
 
 .about-no-text p {
     margin-top: -10px;
+    font-size: 0,8125rem;
 }
 
 .about-bg-full-col {
@@ -104,12 +111,18 @@
         margin-top: 5vh;
     }
 
-    .about-bg {
+    .about-bg-img-1 {
         width: 100%;
+        margin-left: 15px;
+    }
+
+    .about-bg-img-2 {
+        width: 100%;
+        margin-top: -10px;
     }
 
     .about-bg-text-1 {
-        top: 0;
+        top: 0.5vh;
         left: 15vw;
     }
 
@@ -120,8 +133,8 @@
     }
 
     .about-bg-text-2 {
-        top: 0;
-        right: 15vw;
+        top: -1vh;
+        right: 10vw;
     }
 
     .about-bg-text-2 p {
@@ -154,6 +167,7 @@
     .about-no-text p {
         line-height: 1.5vh;
         margin-top: 8px;
+        font-size: 0.5rem;
     }
 
     .about-second-text {
@@ -176,13 +190,13 @@
 
 @media (max-width: 992px) and (min-width: 600px) {
     .about-bg-text-1 {
-        top: 0vh;
+        top: 1vh;
         left: 15vw;
     }
 
     .about-bg-text-2 {
-        top: 1vh;
-        right: 15vw;
+        top: -5vh;
+        right: 12vw;
     }
 
     .about-bg-text-1 p {
@@ -217,5 +231,15 @@
 
     .about-bg-full-text {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .about-bg-text-1 {
+        top: 2vh;
+    }
+
+    .about-bg-text-2 {
+        top: -6vh;
     }
 }

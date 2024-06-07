@@ -109,7 +109,7 @@ export default function Home() {
                     <h1 style={{ textAlign: 'left' }}>Bizimle Keşfe Çıkın <br></br> Ve Damaklarınızı <br></br> Şımartın!</h1>
                     <p>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
                     <div>
-                        <Button href="/urunlerimiz" variant="primary">Ürünlere Göz At?</Button>
+                        <Button href="/urunlerimiz" variant="primary">Ürünlere Göz At!</Button>
                     </div>
                 </Col>
                 <Col xs={12} md={7} lg={7} className="photo-animate-col">
