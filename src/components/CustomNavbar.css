@@ -20,3 +20,25 @@
 .navbar-nav {
     margin: auto;
 }
+
+@media (max-width: 600px) {
+    .navbar-collapse .btn-primary {
+        border-color: white;
+        margin-top: 10px;
+    }
+
+    .navbar-collapse {
+        background-color: #14213d;
+        padding: 20px;
+        color: white;
+    }
+
+    .navbar-nav .nav-link.active {
+        border-bottom-color: white;
+        color: white;
+    }
+
+    .navbar-nav .nav-link {
+        color: white;
+    }
+}

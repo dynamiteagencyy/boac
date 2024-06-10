@@ -14,14 +14,14 @@ interface Comment {
 
 export default function Home() {
     const COMMENTS_URL = 'https://boac-website.s3.eu-central-1.amazonaws.com/comments.json';
-    const dotHeights = [472, 413, 300, 170, 52, 0];
+    const dotHeights = [472, 377, 281, 185, 91, 0];
     const dotImages = [
-        { dot: 6, name: "yabanmersini", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_yabanmersini.png" },
-        { dot: 5, name: "karisik", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_karisik.png" },
-        { dot: 4, name: "cilek", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_cilek.png" },
-        { dot: 3, name: "tuzlukaramel", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_tuzlukaramel.png" },
-        { dot: 2, name: "baklava", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_baklava.png" },
-        { dot: 1, name: "brownie", url: "https://boac-website.s3.eu-central-1.amazonaws.com/homepage_dessert_brownie.png" }
+        { dot: 6, name: "yabanmersini", url: process.env.PUBLIC_URL + "/home-dessert-images/homepage_dessert_yabanmersini.png" },
+        { dot: 5, name: "karisik", url: process.env.PUBLIC_URL + "/home-dessert-images/homepage_dessert_karisik.png" },
+        { dot: 4, name: "cilek", url: process.env.PUBLIC_URL + "/home-dessert-images/homepage_dessert_cilek.png" },
+        { dot: 3, name: "tuzlukaramel", url: process.env.PUBLIC_URL + "/home-dessert-images/homepage_dessert_tuzlukaramel.png" },
+        { dot: 2, name: "baklava", url: process.env.PUBLIC_URL + "/home-dessert-images/homepage_dessert_baklava.png" },
+        { dot: 1, name: "brownie", url: process.env.PUBLIC_URL + "/home-dessert-images/homepage_dessert_brownie.png" }
     ];
     const animationRef = useRef(null);
 
@@ -35,15 +35,15 @@ export default function Home() {
             const animation: any = animationRef.current;
             if (animation) {
                 const height = parseFloat(getComputedStyle(animation).height);
-                if (height < 52) {
+                if (height < 91) {
                     setActiveDot(6);
-                } else if (height >= 52 && height < 170) {
+                } else if (height >= 91 && height < 185) {
                     setActiveDot(5);
-                } else if (height >= 170 && height < 300) {
+                } else if (height >= 185 && height < 281) {
                     setActiveDot(4);
-                } else if (height >= 300 && height < 413) {
+                } else if (height >= 281 && height < 377) {
                     setActiveDot(3);
-                } else if (height >= 413 && height < 472) {
+                } else if (height >= 377 && height < 472) {
                     setActiveDot(2);
                 } else if (height >= 472) {
                     animation.style.animation = 'none';
@@ -60,7 +60,7 @@ export default function Home() {
         setTimeout(() => {
             setAnimationBgImage(dotImages.find(item => item.dot == activeDot)?.url);
             setFade('rotate');
-        }, 500);
+        }, 1000);
         const interval = setInterval(updateActiveDot, 200);
         return () => {
             clearInterval(interval);
@@ -104,11 +104,11 @@ export default function Home() {
     return (
         <Container className="home-container">
             <Row>
-                <Col className="home-entry" xs={12} md={5} lg={5} style={{ paddingLeft: '40px' }}>
-                    <h3 style={{ textAlign: 'left' }}>BOAC'a Hoşgeldin!</h3>
-                    <h1 style={{ textAlign: 'left' }}>Bizimle Keşfe Çıkın <br></br> Ve Damaklarınızı <br></br> Şımartın!</h1>
+                <Col className="home-entry" xs={12} md={5} lg={5}>
+                    <h3>BOAC'a Hoşgeldin!</h3>
+                    <h1>Bizimle Keşfe Çıkın Ve Damaklarınızı Şımartın!</h1>
                     <p>BOAC Soft Serve, enfes soft serve dondurmaları ve el yapımı topping'leriyle tatlı tutkunlarına unutulmaz bir lezzet deneyimi sunuyor. Bizimle keşfe çıkın ve damaklarınızı şımartın!</p>
-                    <div>
+                    <div className="button">
                         <Button href="/urunlerimiz" variant="primary">Ürünlere Göz At!</Button>
                     </div>
                 </Col>

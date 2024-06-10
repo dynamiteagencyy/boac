@@ -4,9 +4,21 @@
     overflow: hidden;
 }
 
+.home-entry {
+    padding-left: 40px;
+}
+
 .home-entry p {
     margin-top: 5vh;
     max-width: 30vw;
+    text-align: left;
+}
+
+.home-entry h3 {
+    text-align: left;
+}
+
+.home-entry h1 {
     text-align: left;
 }
 
@@ -109,6 +121,29 @@
 }
 
 @media (max-width: 600px) {
+    .home-entry {
+        padding: 0 30px;
+        margin-bottom: 30px;
+    }
+
+    .home-entry .button {
+        text-align: center;
+    }
+
+    .home-entry p {
+        text-align: center;
+        max-width: none;
+    }
+    
+    .home-entry h3 {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    .home-entry h1 {
+        text-align: center;
+    }
+
     .home-container {
         padding-top: 1vh;
         padding-left: 0;
@@ -172,7 +207,7 @@
     }
 
     .comments-carousel {
-        padding: 0;
+        padding: 0 20px;
         margin-bottom: -30px;
     }
     
