@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row, Image, Carousel } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import './Products.css';
 import { useEffect, useState } from "react";
 import ProductDetail from "../components/ProductDetail";
