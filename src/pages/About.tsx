@@ -106,8 +106,8 @@ export default function About() {
             <div style={{ margin: '0', padding: '0' }}>
                 <Carousel
                     indicators={false}
-                    nextIcon={<MdChevronRight size={100} />}
-                    prevIcon={<MdChevronLeft size={100} />}>
+                    nextIcon={<MdChevronRight className='carousel-right-icon' size={100} />}
+                    prevIcon={<MdChevronLeft className='carousel-left-icon' size={100} />}>
                     {images.map((item) => (
                         <Carousel.Item key={item.id}>
                             <div>

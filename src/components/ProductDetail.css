@@ -35,7 +35,7 @@
     height: 40%;
     transform: translateX(-50%);
     transform: translateY(-20%);
-    animation: rotate 10s linear infinite;
+    animation: rotate 30s linear infinite;
    }
    .half-right {
     clip-path: inset(0 50% 0 0);
@@ -44,7 +44,7 @@
    }
    .half-right img {
     height: 40%;
-    animation: rotate 10s linear infinite;
+    animation: rotate 30s linear infinite;
     transform: translateX(50%);
     transform: translateY(-20%);
    }
@@ -75,7 +75,7 @@
     background-color: transparent;
    }
    .img-holder-pic img {
-    width: 60%;
+    width: 50%;
    }
    .img-holder-text {
     position: relative;
@@ -163,11 +163,11 @@
       height: 25%;
       transform: translateX(-50%);
       transform: translateY(-20%);
-      animation: rotate 10s linear infinite;
+      animation: rotate 30s linear infinite;
      }
     .half-right img {
       height: 25%;
-      animation: rotate 10s linear infinite;
+      animation: rotate 30s linear infinite;
       transform: translateX(-50%);
       transform: translateY(-20%);
      }

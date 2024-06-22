@@ -99,11 +99,19 @@
     width: 70vw;
     line-height: 4vh;
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
 
 .about-no-row {
     margin-top: 5vh;
+}
+
+.carousel-right-icon {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.carousel-left-icon {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 @media (max-width: 600px) {
