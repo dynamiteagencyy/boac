@@ -68,18 +68,18 @@ function Products() {
                         <Container className="products-container">
                             <Row>
                                 <Col>
-                                    <img className="img-pull-left-side" onClick={() => { onClickShowDetail("Dondurmalar") }} style={{ width: "20%" }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_icecream_btn.png" />
+                                    <img className="img-pull-left-side" onClick={() => { onClickShowDetail("Dondurmalar") }} style={{ width: "30%" }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_icecream_btn.png" />
                                     <h3 style={{ margin: "20px 0px 130px 0px" }}>Dondurmalar</h3>
                                 </Col>
-                                <Col><img className="img-pull-left-side" onClick={() => { onClickShowDetail("Yoğurtlar") }} style={{ width: "20%" }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_yogurt_btn.png" />
+                                <Col><img className="img-pull-left-side" onClick={() => { onClickShowDetail("Yoğurtlar") }} style={{ width: "30%" }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_yogurt_btn.png" />
                                     <h3 style={{ margin: "20px 0px 130px 0px" }}>Yoğurtlar</h3>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col><img className="img-pull-left-side" style={{ width: "20%" }} onClick={() => { onClickShowDetail("Külahlar") }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_cone_btn.png" />
+                                <Col><img className="img-pull-left-side" style={{ width: "30%" }} onClick={() => { onClickShowDetail("Külahlar") }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_cone_btn.png" />
                                     <h3 style={{ margin: "20px 0px 130px 0px" }}>Külahlar</h3>
                                 </Col>
-                                <Col><img className="img-pull-left-side" style={{ width: "10%" }} onClick={() => { onClickShowDetail("İçecekler") }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_drink_btn.png" />
+                                <Col><img className="img-pull-left-side" style={{ width: "15%" }} onClick={() => { onClickShowDetail("İçecekler") }} src="https://boac-website.s3.eu-central-1.amazonaws.com/products_drink_btn.png" />
                                     <h3 style={{ margin: "20px 0px 130px 0px" }}>İçecekler</h3>
                                 </Col>
                             </Row>
