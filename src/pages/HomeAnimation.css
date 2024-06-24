@@ -208,15 +208,14 @@
 .rotate {
   opacity: 1;
   transform: rotate(0deg);
-  transition: 0.8s opacity ease, 0.6s transform ease;
+  transition: 0.8s opacity ease;
   animation-name: example;
   animation-duration: 0.7s;
-  animation-direction: alternate;
 }
 
 @keyframes example {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     filter: blur(0px);
   }
 
@@ -225,11 +224,11 @@
   }
 
   40% {
-    filter: blur(1px);
+    filter: blur(2px);
   }
 
   60% {
-    filter: blur(1px);
+    filter: blur(2px);
   }
 
   80% {
@@ -237,7 +236,7 @@
   }
   
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
     filter: blur(0px);
   }
 }
