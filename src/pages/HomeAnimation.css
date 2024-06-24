@@ -224,11 +224,11 @@
   }
 
   40% {
-    filter: blur(2px);
+    filter: blur(1px);
   }
 
   60% {
-    filter: blur(2px);
+    filter: blur(1px);
   }
 
   80% {
