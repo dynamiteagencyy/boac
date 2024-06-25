@@ -118,7 +118,7 @@ export default function Home() {
                     <div className={`pictures ${activeDot===2?'rotate':''}`} style={{ backgroundImage: `url(${dotImages.find(item => item.dot == 2)?.url})` }}></div>
                     <div className={`pictures ${activeDot===3?'rotate':''}`} style={{ backgroundImage: `url(${dotImages.find(item => item.dot == 3)?.url})` }}></div>
                     <div className={`pictures ${activeDot===4?'rotate':''}`} style={{ backgroundImage: `url(${dotImages.find(item => item.dot == 4)?.url})` }}></div>
-                    <div className={`pictures ${activeDot===5?'rotate':''}`} style={{ backgroundImage: `url(${dotImages.find(item => item.dot == 5)?.url})`, marginRight: '-7vw'}}></div>
+                    <div className={`pictures ${activeDot===5?'rotate':''}`} style={{ backgroundImage: `url(${dotImages.find(item => item.dot == 5)?.url})`}}></div>
                     <div className={`pictures ${activeDot===6?'rotate':''}`} style={{ backgroundImage: `url(${dotImages.find(item => item.dot == 6)?.url})` }}></div>
                     <div className="animation-container">
                         <div className='animation' ref={animationRef}></div>
